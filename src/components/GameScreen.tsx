@@ -17,27 +17,27 @@ export function GameScreen({
   onReset,
 }: GameScreenProps) {
   return (
-    <div className="flex flex-col min-h-full bg-gray-50">
+    <div className="flex flex-col min-h-full" style={{ background: 'var(--gradient-background)' }}>
       {/* Header */}
-      <header className="flex items-center justify-between p-3 bg-white border-b border-gray-200">
+      <header className="flex items-center justify-between p-3 backdrop-blur-md border-b" style={{ background: 'var(--color-glass-bg)', borderColor: 'var(--color-glass-border)', boxShadow: 'var(--color-glass-shadow)' }}>
         <button
           onClick={onReset}
-          className="text-gray-500 text-sm px-3 py-1.5 rounded active:bg-gray-100"
+          className="text-gray-500 text-sm px-3 py-1.5 rounded active:scale-95 transition-all duration-150"
         >
           ← Back
         </button>
-        <h1 className="font-bold text-gray-900">Bingo Mixer</h1>
+        <h1 className="font-bold text-gray-900" style={{ fontFamily: 'var(--font-display)' }}>Bingo Mixer</h1>
         <div className="w-16"></div>
       </header>
 
       {/* Instructions */}
-      <p className="text-center text-gray-500 text-sm py-2 px-4">
+      <p className="text-center text-gray-500 text-sm py-2 px-4 backdrop-blur-sm" style={{ background: 'var(--color-glass-bg-strong)' }}>
         Tap a square when you find someone who matches it.
       </p>
 
       {/* Bingo indicator */}
       {hasBingo && (
-        <div className="bg-amber-100 text-amber-800 text-center py-2 font-semibold text-sm">
+        <div className="backdrop-blur-md text-center py-2 font-semibold text-sm border-y" style={{ background: 'var(--gradient-bingo)', color: 'white', borderColor: 'var(--color-glass-border)' }}>
           🎉 BINGO! You got a line!
         </div>
       )}
