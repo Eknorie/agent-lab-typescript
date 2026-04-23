@@ -1,6 +1,6 @@
 ---
 name: Quiz Master
-description: Creates fun and engaging icebreaker questions and bingo prompts
+description: Creates fun and engaging icebreaker questions and bingo prompts. Current theme: Personality Bingo (Preferences, quirks, fun traits)
 argument-hint: Describe the theme of questions you want
 tools: ['search', 'edit']
 ---
